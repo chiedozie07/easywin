@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { cn } from "../lib/utils";
 
+
 // const cn = (...classes: string[]) => classes.filter(Boolean).join(" ");
 
 const navItems: string[] = [
@@ -35,14 +36,14 @@ export default function Header() {
         </div>
 
         {/* center - navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 ml-5">
           {navItems.map((item) => (
             <a
               key={item}
               href="#"
               className={cn(
                 "text-white font-medium hover:text-yellow-300 transition relative",
-                item === "Scratch & win" ? "text-yellow-300 font-bold" : ""
+                item === "Scratch & win" && "text-yellow-300 font-bold"
               )}
             >
               {item}
@@ -55,7 +56,7 @@ export default function Header() {
         </nav>
 
         {/* right - profile icon */}
-        <div className="w-8 h-8 bg-white text-green-500 rounded-full flex items-center justify-center ml-2">
+        <div className="w-8 h-8 bg-white text-green-500 rounded-full flex items-center justify-center ml-5 cursor-pointer">
           👤
         </div>
       </div>
