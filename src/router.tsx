@@ -7,9 +7,11 @@ import GamesPage from "./pages/GamesPage";
 import SelectedGamePage from "./pages/SelectedGamePage";
 import ProfilePage from "./pages/ProfilePage";
 import LuckyWorldCupPage from "./pages/LuckyWorldCupPage";
+import PageNotFound from "./components/PageNotFound";
+
 
 export const router = createBrowserRouter([
-  { path: "/", element: <App /> },
+  { path: "/", element: <App />, errorElement: <PageNotFound />, },
   { 
     path: "/games", 
     element: <GamesPage />,
