@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+
+
 const HomePage = () => {
   const navigate = useNavigate(); 
 
   return (
+    <> 
     <main className="flex flex-col items-center justify-center min-h-screen px-4 text-center mt-4">
       {/* animated heading */}
       <motion.h1
@@ -32,6 +35,7 @@ const HomePage = () => {
         Get Started
       </motion.button>
     </main>
+    </>
   );
 };
 
