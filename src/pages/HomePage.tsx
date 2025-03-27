@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate(); 
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4 text-center mt-4">
       {/* animated heading */}
@@ -17,12 +20,14 @@ const HomePage = () => {
 
       {/* animated CTA button */}
       <motion.button
+        style={{backgroundColor: '#15BB50'}}
         className="mt-6 px-6 py-3 text-lg text-gray-200 font-semibold rounded-full shadow-md bg-yellow-400 hover:bg-yellow-500 transition-all"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        // onClick={() => navigate("/games")}
       >
         Get Started
       </motion.button>
